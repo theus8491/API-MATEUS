@@ -1,3 +1,4 @@
+// Função para enviar pergunta
 async function sendQuestion() {
     const apiKey = document.getElementById("apiKey").value.trim();
     const question = document.getElementById("userInput").value.trim();
@@ -45,4 +46,13 @@ async function sendQuestion() {
     }
 }
 
+// Função para limpar tudo
+function clearFields() {
+    document.getElementById("apiKey").value = "";
+    document.getElementById("userInput").value = "";
+    document.getElementById("response").innerText = "";
+}
+
+// Eventos dos botões
 document.getElementById("sendBtn").addEventListener("click", sendQuestion);
+document.getElementById("clearBtn").addEventListener("click", clearFields);
